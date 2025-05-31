@@ -5,7 +5,8 @@ include 'database.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $pais = trim($_POST['pais']);
   $ciudad = trim($_POST['ciudad']);
-  $pasaporte = $_POST['pasaporte']; // Será "1" o "0"
+  $pasaporte = $_POST['pasaporte']; // "1" o "0"
+  $creado_por = $_SESSION['usuario_id'] ?? null;
 
   $errores = [];
 
@@ -23,9 +24,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $errores[] = "Debe seleccionar si requiere pasaporte.";
   }
 
+  if (empty($creado_por)) {
+    $errores[] = "No se ha podido identificar al usuario que crea el destino.";
+  }
+
   if (empty($errores)) {
-    $stmt = $pdo->prepare("INSERT INTO destino (pais, ciudad, pasaporte) VALUES (?, ?, ?)");
-    $stmt->execute([$pais, $ciudad, $pasaporte]); // 1 o 0
+    $stmt = $pdo->prepare("INSERT INTO destino (pais, ciudad, pasaporte, creado_por) VALUES (?, ?, ?, ?)");
+    $stmt->execute([$pais, $ciudad, $pasaporte, $creado_por]);
     header("Location: index.php");
     exit;
   } else {
