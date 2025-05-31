@@ -105,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <li><a href="index.php">Inicio</a></li>
                     <li><a href="create.php">Creación de Destinos</a></li>
                     <li> <a href="register.php">Registro Usuario</a><li>
-                    <li> <a href="loggin.php">Identificarse</a><li>
+                    <li> <a href="login.php">Identificarse</a><li>
                     <li><a href="createguide.php">Creacion de Guía</a></li>
                      <li><a href="destinos.php">Listado de Destinos</a></li>
                 </ul>
@@ -114,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p>Encuentra el lugar perfecto para tu próxima aventura</p>
         </header>
          <section class="contact-form">
-            <h2>Crea un destino</h2>
+            <h2>Formulario de registro</h2>
             <form action="#" method="post" id="formulario">
                 <fieldset>
                     <legend>Detalles del usuario</legend> 
@@ -155,11 +155,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="error" id="error-numpass"></div>
 
                     <label for="fechaexpedicion">Fecha de expedición:</label>
-                    <input type="text" id="fechaexpedicion" name="fechaexpedicion">
+                    <input type="fecha" id="fechaexpedicion" name="fechaexpedicion">
                     <div class="error" id="error-fechaex"></div>
 
                     <label for="caducidad">Fecha de caducidad:</label>
-                    <input type="text" id="caducidad" name="caducidad">
+                    <input type="fecha" id="caducidad" name="caducidad">
                     <div class="error" id="error-caducidad"></div>
                 <button type="button" class="btn" id="enviar">Registrarse</button>  <!--hacemos un boton type Button para controlar cuando enviar el formulario -->
                 </fieldset>
@@ -252,6 +252,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
          });
 </script>
+
+                
+            </form>
+        </section>
+
+           <footer>
+            <p>© 2025 Agencia de Viajes. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
 
                 
             </form>
