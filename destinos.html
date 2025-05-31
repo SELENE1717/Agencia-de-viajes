@@ -23,26 +23,21 @@
         </header>
 
         <section id="destinos">
-            <h2>Destinos Populares</h2>
-            <div class="gallery">
-                <div class="card">
-                    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0j61BT-tzeke_UwzD9FpLOxlS2-7f_pBt3A&s" alt="Tokio">
-                    <h3>Tokio, Japón</h3>
-                    <p>Una ciudad futurista con historia, donde la tecnología y la tradición se mezclan.</p>
-                    <button class="btn"><i class="fas fa-shopping-cart"></i> Reservar</button>
-                </div>
-                <div class="card">
-                    <img src="https://img.static-af.com/transform/45cb9a13-b167-4842-8ea8-05d0cc7a4d04/"alt="París">
-                    
-                    <h3>París, Francia</h3>
-                    <p>La ciudad del amor y la cultura, con la icónica Torre Eiffel y su exquisita gastronomía.</p>
-                    <button class="btn"><i class="fas fa-shopping-cart"></i> Reservar</button>
-                </div>
-                <div class="card">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/New_york_times_square-terabass.jpg" alt="Nueva York">
-                    <h3>Nueva York, EE.UU.</h3>
-                    <p>La ciudad que nunca duerme, con sus famosos rascacielos y una energía vibrante.</p>
-                    <button class="btn"><i class="fas fa-shopping-cart"></i> Reservar</button>
+            <h2>Nuestros Destinos</h2>
+                    <tr>
+          <td><?= htmlspecialchars($destino['pais']) ?></td>
+          <td><?= htmlspecialchars($destino['ciudad']) ?></td>
+          <td><?= htmlspecialchars($destino['pasaporte']) ?></td>
+          <td><?= $destino['created_at'] ?></td>
+          <td>
+            <a href="edit.php?id=<?= $task['id'] ?>" class="btn btn-warning btn-sm">Editar</a>
+           <!-- <a href="delete.php?id=<?= $task['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Borrar</a>-->
+           <form action="delete.php" method="POST" style="display:inline;">
+              <input type="hidden" name="id" value="<?= $task['id'] ?>">
+              <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro que deseas borrar esta tarea?')">Borrar</button>
+          </form>
+
+          </td>
                 </div>
             </div>
         </section>
