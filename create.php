@@ -78,7 +78,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <input type="text" id="ciudad">
                     <div class="error" id="error-ciudad"></div>
 
-                    <label id="pasaporte" name="pasaporte">Requiere pasaporte:</label>
+                    <label for="pasaporte">Requiere pasaporte:</label>
+                     <select  id="pasaporte" name="pasaporte">
                      <option value="1">si</option>
                      <option value="0">no</option>
                      <select>
