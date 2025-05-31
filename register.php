@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   //si no hay errores en los datos del usuario se añaden a la tabla
   if (empty($errores)) {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-    $stmt = $pdo->prepare("INSERT INTO usuario (username, password, nombre, apellidos, edad, email) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt = $pdo->prepare("INSERT INTO usuarios (username, password, nombre, apellidos, edad, email) VALUES (?, ?, ?, ?, ?, ?)");
     $stmt->execute([$username, $hashed_password, $nombre, $apellidos, $edad, $email]);
 
     //como hemos colocado que nuestro ID se genere automáticamente por ser SERIAL, tenemos que recuperar este id
