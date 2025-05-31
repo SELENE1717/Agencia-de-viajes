@@ -1,3 +1,6 @@
+<?php 
+include 'database.php'; 
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,10 +15,10 @@
         <header class="hero">
             <nav class="navbar">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="destinos.html">Destinos</a></li>
-                   
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="create.php">Creación de Destinos</a></li>
+                    <li> <a href="login.php">Identificación</a><li>
+                    <li><a href="createguide.php">Creacion de Guía</a></li>
                 </ul>
             </nav>
             <h1>Explora Nuestros Destinos</h1>
@@ -23,21 +26,16 @@
         </header>
 
         <section id="destinos">
+            <!--mostramos los diferentes campos de los destinos-->
             <h2>Nuestros Destinos</h2>
-                    <tr>
-          <td><?= htmlspecialchars($destino['pais']) ?></td>
+          <tr>
+          <td><?= htmlspecialchars($destino['pais']) ?></td> 
           <td><?= htmlspecialchars($destino['ciudad']) ?></td>
           <td><?= htmlspecialchars($destino['pasaporte']) ?></td>
-          <td><?= $destino['created_at'] ?></td>
+          <td><?= $destino['created_por'] ?></td>
           <td>
-            <a href="edit.php?id=<?= $task['id'] ?>" class="btn btn-warning btn-sm">Editar</a>
-           <!-- <a href="delete.php?id=<?= $task['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Borrar</a>-->
-           <form action="delete.php" method="POST" style="display:inline;">
-              <input type="hidden" name="id" value="<?= $task['id'] ?>">
-              <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro que deseas borrar esta tarea?')">Borrar</button>
-          </form>
-
-          </td>
+          </td> <!--me falta poner quienes están inscritos-->
+          </tr>
                 </div>
             </div>
         </section>
