@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                      <option value="1">si</option>
                      <option value="0">no</option>
                      <select>
-                    <div class="error" id="error-pasaporte></div>
+                    <div class="error" id="error-pasaporte"></div>
                 </fieldset>
 
                 <button type="button" class="btn" id="enviar">Enviar Destino</button> <!--hacemos un boton type Button para controlar cuando enviar el formulario -->
