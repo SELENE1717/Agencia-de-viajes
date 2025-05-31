@@ -212,7 +212,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }else if(password.value.trim() ===''){
                 esvalido = false;
                 error_password.textContent = "El password es obligatorio";
-            }else if(username.value.trim().length < 5){
+            }else if(password.value.trim().length < 5){
                 esvalido = false;
                 error_password.textContent ="La contraseña debe tener más de 5 letras";
             }else  if (nombre.value.trim() ===''){
