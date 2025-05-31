@@ -163,6 +163,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="error" id="error-caducidad"></div>
                 <button type="button" class="btn" id="enviar">Registrarse</button>  <!--hacemos un boton type Button para controlar cuando enviar el formulario -->
                 </fieldset>
+                     </form>
+        </section>
+
+           <footer>
+            <p>© 2025 Agencia de Viajes. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
                 
 <script>
         let username = document.getElementById("username");
@@ -252,23 +263,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
          });
 </script>
-
-                
-            </form>
-        </section>
-
-           <footer>
-            <p>© 2025 Agencia de Viajes. Todos los derechos reservados.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </footer>
-    </div>
 </body>
 </html>
 
                 
-            </form>
-        </section>
